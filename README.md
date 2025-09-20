@@ -58,6 +58,10 @@ file1 file2 file3
 /home/user
 ```
 
+## Linux Terminals TTY PTY & Shell
+
+![terminal & shell pty](./docs/terminal_and_shell_PTY.png)
+
 ## Project Tasks
 
 ### Task 0: Betty would be proud
