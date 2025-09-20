@@ -60,7 +60,7 @@ file1 file2 file3
 
 ## Linux Terminals TTY PTY & Shell
 
-![terminal & shell pty](./docs/terminal_and_shell_PTY.png)
+![terminal & shell pty](./docs/simple_shell.gif)
 
 ## Project Tasks
 
