@@ -2,6 +2,18 @@
 
 A simple UNIX command line interpreter written in C as part of the ALX Software Engineering program.
 
+## Authors
+
+ - 🎓 42 Intra: [eel-garo](https://profile.intra.42.fr/users/eel-garo)
+ - 🐙 GitHub: [MEHDIJAD](https://github.com/MEHDIJAD/)
+ - 💼 LinkedIn: [Connect with me](https://www.linkedin.com/in/el-mehdi-el-garouaz-a028aa287/)
+
+## Repository
+
+GitHub repository: [simple_shell](https://github.com/your-username/simple_shell)
+
+---
+
 ## Description
 
 This project implements a basic shell that can execute commands, handle arguments, search the PATH, and provide built-in commands. The shell operates in both interactive and non-interactive modes, mimicking the behavior of `/bin/sh`.
@@ -10,6 +22,18 @@ This project implements a basic shell that can execute commands, handle argument
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+```
+* Or use this:
+```bash
+	chmod +x run.sh
+	./run *.c 
+```
+
+## Testing
+```bash
+	chmod +x leakTester.sh
+	./run Task05.c
+	./leakTester.sh hsh 
 ```
 
 ## Usage
@@ -50,6 +74,28 @@ file1 file2 file3
 - Handle "end of file" condition (Ctrl+D)
 - Display error messages for non-existent commands
 - No PATH resolution, arguments, or built-ins
+
+```bash
+julien@ubuntu:~/shell$ ./shell 
+#cisfun$ ls
+./shell: No such file or directory
+#cisfun$ /bin/ls
+barbie_j       env-main.c  exec.c  fork.c  pid.c  ppid.c    prompt   prompt.c  shell.c  stat.c         wait
+env-environ.c  exec    fork    mypid   ppid   printenv  promptc  shell     stat test_scripting.sh  wait.c
+#cisfun$ /bin/ls -l
+./shell: No such file or directory
+#cisfun$ ^[[D^[[D^[[D
+./shell: No such file or directory
+#cisfun$ ^[[C^[[C^[[C^[[C
+./shell: No such file or directory
+#cisfun$ exit
+./shell: No such file or directory
+#cisfun$ ^C
+julien@ubuntu:~/shell$ echo "/bin/ls" | ./shell
+barbie_j       env-main.c  exec.c  fork.c  pid.c  ppid.c    prompt   prompt.c  shell.c  stat.c         wait
+env-environ.c  exec    fork    mypid   ppid   printenv  promptc  shell     stat test_scripting.sh  wait.c
+#cisfun$ julien@ubuntu:~/shell$
+```
 
 **Functions Used**:
 - `getline()` - Read command input
@@ -169,15 +215,12 @@ int main(int ac, char **av, char **env);         /* Main shell loop */
 
 ```
 simple_shell/
-├── README.md           # Project documentation
-├── AUTHORS            # Contributors list
-├── main.c             # Main shell loop
-├── shell.c            # Core shell functions
-├── builtin.c          # Built-in command handlers
-├── path.c             # PATH resolution functions
-├── parser.c           # Command parsing functions
-├── utils.c            # Utility functions
-└── shell.h            # Header file with prototypes
+├── README.md        # Project documentation
+├── Task01.c         # UNIX command line interpreter.
+├── Task02.c         # + Handle command lines with arguments
+├── Task03.c         # + Handle the PATH
+├── Task04.c         # Implement the exit built-in   
+└── Task05.c         # Implement the env built-in
 ```
 
 ## Error Handling
@@ -214,16 +257,5 @@ The shell implements proper memory management:
 - No memory leaks in normal operation
 - Clean exit procedures free all allocated memory
 
-## Authors
-
- - 🎓 42 Intra: [eel-garo](https://profile.intra.42.fr/users/eel-garo)
- - 🐙 GitHub: [MEHDIJAD](https://github.com/MEHDIJAD/)
- - 💼 LinkedIn: [Connect with me](https://www.linkedin.com/in/el-mehdi-el-garouaz-a028aa287/)
-
-## Repository
-
-GitHub repository: [simple_shell](https://github.com/your-username/simple_shell)
-
----
 
 *This project is part of the ALX Software Engineering program curriculum.*

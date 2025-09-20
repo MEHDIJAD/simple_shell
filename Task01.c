@@ -47,8 +47,9 @@ void excuteCommand(char *cmd, char **env)
 	char *argv[2];
 
 	/* Skip empty commands */
-    if (strlen(cmd) == 0)
+    if (strlen(cmd) == 0){
         return;
+	}
 	argv[0] = cmd;
 	argv[1] = NULL;
 

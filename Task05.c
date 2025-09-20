@@ -13,7 +13,7 @@
  */
 void printPrompt(void)
 {
-	write(STDOUT_FILENO, "$ ", 2);
+	write(STDOUT_FILENO, "\033[1;34m$\033[0m ", strlen("\033[1;34m$\033[0m "));
 }
 
 char *readCommand(void)
